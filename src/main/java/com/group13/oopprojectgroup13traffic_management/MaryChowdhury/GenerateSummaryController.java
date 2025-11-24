@@ -1,5 +1,8 @@
 package com.group13.oopprojectgroup13traffic_management.MaryChowdhury;
 
+import javafx.event.ActionEvent;
+import javafx.scene.control.*;
+
 public class GenerateSummaryController
 {
     @javafx.fxml.FXML

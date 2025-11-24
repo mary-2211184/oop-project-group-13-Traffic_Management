@@ -1,5 +1,10 @@
 package com.group13.oopprojectgroup13traffic_management.MaryChowdhury;
 
+import javafx.event.ActionEvent;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.Label;
+import javafx.scene.control.ListView;
+
 public class AccessEvidenceController
 {
     @javafx.fxml.FXML

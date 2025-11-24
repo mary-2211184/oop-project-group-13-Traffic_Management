@@ -1,5 +1,10 @@
 package com.group13.oopprojectgroup13traffic_management.MaryChowdhury;
 
+import javafx.event.ActionEvent;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
+
 public class CloseReportController
 {
     @javafx.fxml.FXML

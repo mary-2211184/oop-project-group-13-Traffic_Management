@@ -1,5 +1,8 @@
 package com.group13.oopprojectgroup13traffic_management.MaryChowdhury;
 
+import javafx.event.ActionEvent;
+import javafx.scene.text.Text;
+
 public class NotificationsController
 {
     @javafx.fxml.FXML
