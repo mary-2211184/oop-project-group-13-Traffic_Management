@@ -8,7 +8,7 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="779.0" prefWidth="943.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.group13.oopprojectgroup13traffic_management.TcAdmin.Reports">
+<AnchorPane prefHeight="739.0" prefWidth="906.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.group13.oopprojectgroup13traffic_management.Mobasshira_Akter.TCA.ReportsController">
    <children>
       <Label layoutX="399.0" layoutY="-2.6" prefHeight="82.0" prefWidth="52.0" text="Reports" textAlignment="CENTER" AnchorPane.topAnchor="-2.6" />
       <Label layoutX="146.0" layoutY="142.0" text="Select Report Type:" />
@@ -18,13 +18,13 @@
       <DatePicker fx:id="dpLD" layoutX="605.0" layoutY="117.0" />
       <DatePicker fx:id="dpLDD" layoutX="606.0" layoutY="161.0" />
       <Button layoutX="417.0" layoutY="234.0" mnemonicParsing="false" onAction="#generatereportOA" text="Generate Report" />
-      <TableView fx:id="reportsTV" layoutY="470.0" prefHeight="200.0" prefWidth="944.0">
+      <TableView fx:id="reportsTV" layoutX="2.0" layoutY="470.0" prefHeight="200.0" prefWidth="906.0">
         <columns>
           <TableColumn fx:id="reportsDateTC" prefWidth="126.39999085664749" text="Date" />
           <TableColumn fx:id="reportsLocationTC" prefWidth="164.80006408691406" text="Location" />
-            <TableColumn fx:id="reportsTrafficDencityTC" prefWidth="368.00006103515625" text="Traffic Dencity" />
-            <TableColumn fx:id="reportsCongestionLevelTC" prefWidth="121.59991455078125" text="Congestion Level" />
-            <TableColumn fx:id="reportsIncidentsTC" prefWidth="160.0" text="Incidents" />
+            <TableColumn fx:id="reportsTrafficDencityTC" prefWidth="253.59994506835938" text="Traffic Dencity" />
+            <TableColumn fx:id="reportsCongestionLevelTC" prefWidth="116.79998779296875" text="Congestion Level" />
+            <TableColumn fx:id="reportsIncidentsTC" prefWidth="280.0" text="Incidents" />
         </columns>
       </TableView>
       <Button layoutX="686.0" layoutY="699.0" mnemonicParsing="false" onAction="#exportaspdfOA" text="Export as PDF" />

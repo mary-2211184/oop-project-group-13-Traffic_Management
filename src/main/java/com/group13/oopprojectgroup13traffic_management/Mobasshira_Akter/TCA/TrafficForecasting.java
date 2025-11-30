@@ -1,6 +1,6 @@
 package com.group13.oopprojectgroup13traffic_management.Mobasshira_Akter.TCA;
 
-public class Traffic_Forecasting
+public class TrafficForecasting
 {
     @javafx.fxml.FXML
     private ComboBox fzCB;

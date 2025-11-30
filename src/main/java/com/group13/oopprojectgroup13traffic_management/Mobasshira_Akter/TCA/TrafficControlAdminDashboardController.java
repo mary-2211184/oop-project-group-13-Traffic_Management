@@ -2,8 +2,6 @@ package com.group13.oopprojectgroup13traffic_management.Mobasshira_Akter.TCA;
 
 public class TrafficControlAdminDashboardController
 {
-    @javafx.fxml.FXML
-    private AnchorPane aP;
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -21,7 +19,7 @@ public class TrafficControlAdminDashboardController
     public void anOA(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void bOA(ActionEvent actionEvent) {
     }
 
@@ -43,5 +41,13 @@ public class TrafficControlAdminDashboardController
 
     @javafx.fxml.FXML
     public void hdOA(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void bOA1(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void loOA(ActionEvent actionEvent) {
     }
 }

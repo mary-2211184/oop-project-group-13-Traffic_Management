@@ -8,7 +8,7 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="508.0" prefWidth="854.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.group13.oopprojectgroup13traffic_management.TcAdmin.Traffic_Forecasting">
+<AnchorPane prefHeight="575.0" prefWidth="854.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.group13.oopprojectgroup13traffic_management.Mobasshira_Akter.TCA.TrafficForecastingController">
    <children>
       <Label layoutX="380.0" layoutY="25.0" text="Live Traffic Forecasting" />
       <ComboBox fx:id="frCB" layoutX="618.0" layoutY="133.0" prefWidth="150.0" />
@@ -17,14 +17,15 @@
       <Button layoutX="552.0" layoutY="219.0" mnemonicParsing="false" onAction="#gfOA" text="Generate Forecast" />
       <Label layoutX="91.0" layoutY="135.0" text="Forecast Zone:" />
       <Label layoutX="502.0" layoutY="136.0" text="Forecast Route:" />
-      <TableView fx:id="forecastTableTV" layoutX="189.0" layoutY="285.0" prefHeight="187.0" prefWidth="494.0">
+      <TableView fx:id="forecastTableTV" layoutX="80.0" layoutY="285.0" prefHeight="187.0" prefWidth="690.0">
         <columns>
-          <TableColumn fx:id="fttvzonerouteTC" prefWidth="120.79998779296875" text="Zone/Route" />
-          <TableColumn fx:id="fttvzvcTC" prefWidth="148.79998779296875" text="Vehicle Count" />
-            <TableColumn fx:id="fttvtlTC" prefWidth="126.4000244140625" text="Traffic Level" />
-            <TableColumn fx:id="fttvptTC" prefWidth="96.800048828125" text="Peak Time" />
+          <TableColumn fx:id="fttvzonerouteTC" prefWidth="165.60000610351562" text="Zone/Route" />
+          <TableColumn fx:id="fttvzvcTC" prefWidth="184.8000030517578" text="Vehicle Count" />
+            <TableColumn fx:id="fttvtlTC" prefWidth="180.0" text="Traffic Level" />
+            <TableColumn fx:id="fttvptTC" prefWidth="160.0" text="Peak Time" />
         </columns>
       </TableView>
       <Label layoutX="81.0" layoutY="194.0" text="Select Forecast Time:" />
+      <Button layoutX="717.0" layoutY="504.0" mnemonicParsing="false" onAction="#bOA3" text="Back" />
    </children>
 </AnchorPane>
