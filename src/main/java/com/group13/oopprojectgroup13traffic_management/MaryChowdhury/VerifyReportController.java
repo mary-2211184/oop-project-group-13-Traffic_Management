@@ -1,18 +1,15 @@
-import com.group13.oopprojectgroup13traffic_management.MaryChowdhury.MyReportsController;
+package com.group13.oopprojectgroup13traffic_management.MaryChowdhury;
+
 import javafx.beans.property.SimpleStringProperty;
-import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 
-import java.text.BreakIterator;
-
-public class verifyReportController
+public class VerifyReportController
 {
     @FXML public TableView<MyReportsController.ReportRow> reportsTable;
     @FXML public TableColumn<MyReportsController.ReportRow, String> colId;
@@ -93,7 +90,7 @@ public class verifyReportController
         return STR."VerifyReportController{reportsTable=\{reportsTable}, colId=\{colId}, colDate=\{colDate}, colType=\{colType}, colReporter=\{colReporter}, colStatus=\{colStatus}, verifyLabel=\{verifyLabel}, data=\{data}}";
     }
 
-    public verifyReportController(TableView<MyReportsController.ReportRow> reportsTable, TableColumn<MyReportsController.ReportRow, String> colId, TableColumn<MyReportsController.ReportRow, String> colDate, TableColumn<MyReportsController.ReportRow, String> colType, TableColumn<MyReportsController.ReportRow, String> colReporter, TableColumn<MyReportsController.ReportRow, String> colStatus, Label verifyLabel, ObservableList<MyReportsController.ReportRow> data) {
+    public VerifyReportController(TableView<MyReportsController.ReportRow> reportsTable, TableColumn<MyReportsController.ReportRow, String> colId, TableColumn<MyReportsController.ReportRow, String> colDate, TableColumn<MyReportsController.ReportRow, String> colType, TableColumn<MyReportsController.ReportRow, String> colReporter, TableColumn<MyReportsController.ReportRow, String> colStatus, Label verifyLabel, ObservableList<MyReportsController.ReportRow> data) {
         this.reportsTable = reportsTable;
         this.colId = colId;
         this.colType = colType;
@@ -131,22 +128,22 @@ public class verifyReportController
 
         MyReportsController.ReportRow value;
     }
-
-    private ObservableValue<String> call(TableColumn.CellDataFeatures<MyReportsController.ReportRow, String> c1) {
-        ObservableValue<String> call = call(c1);
-        return call;
-    }
-
-
-    @FXML
-    public void oaViewEvidence(ActionEvent actionEvent) {
-        ChoiceBox<Object> reportsTable = null;
-        MyReportsController.ReportRow sel = (MyReportsController.ReportRow) reportsTable.getSelectionModel().getSelectedItem();
-        BreakIterator verifyLabel = null;
-        if (sel==null) { verifyLabel.setText("Select a report."); return; }
-        // TODO: open evidence viewer and load files
-        verifyLabel.setText(STR."Open evidence for \{sel.id}");
-    }
-
-void main() {
-}
+//
+//    private ObservableValue<String> call(TableColumn.CellDataFeatures<MyReportsController.ReportRow, String> c1) {
+//        ObservableValue<String> call = call(c1);
+//        return call;
+//    }
+//
+//
+//    @FXML
+//    public void oaViewEvidence(ActionEvent actionEvent) {
+//        ChoiceBox<Object> reportsTable = null;
+//        MyReportsController.ReportRow sel = (MyReportsController.ReportRow) reportsTable.getSelectionModel().getSelectedItem();
+//        BreakIterator verifyLabel = null;
+//        if (sel==null) { verifyLabel.setText("Select a report."); return; }
+//        // TODO: open evidence viewer and load files
+//        verifyLabel.setText(STR."Open evidence for \{sel.id}");
+//    }
+//
+//void main() {
+//}
