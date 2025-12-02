@@ -1,5 +1,5 @@
-import com.sun.glass.ui.Clipboard;
-import com.sun.glass.ui.ClipboardAssistance;
+package com.group13.oopprojectgroup13traffic_management.MaryChowdhury;
+
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -9,8 +9,7 @@ import javafx.scene.control.*;
 
 import java.text.BreakIterator;
 
-public class deletereportcontroller
-{
+public class DeleteReportController {
     @FXML
     private TableColumn colTime;
     @FXML
@@ -24,7 +23,7 @@ public class deletereportcontroller
     @FXML
     private TableColumn colStatus;
 
-    private ObservableList<ReportRow> data = FXCollections.observableArrayList();
+    private ObservableList<MyReportsController.ReportRow> data = FXCollections.observableArrayList();
 
     public TableColumn getColTime() {
         return colTime;
@@ -74,11 +73,11 @@ public class deletereportcontroller
         this.colStatus = colStatus;
     }
 
-    public ObservableList<ReportRow> getData() {
+    public ObservableList<MyReportsController.ReportRow> getData() {
         return data;
     }
 
-    public void setData(ObservableList<ReportRow> data) {
+    public void setData(ObservableList<MyReportsController.ReportRow> data) {
         this.data = data;
     }
 
@@ -87,14 +86,13 @@ public class deletereportcontroller
         return STR."deletereportcontroller{colTime=\{colTime}, deleteStatusLabel=\{deleteStatusLabel}, tableView=\{tableView}, colDate=\{colDate}, colId=\{colId}, colStatus=\{colStatus}, data=\{data}}";
     }
 
-    public deletereportcontroller(TableColumn colTime, Label deleteStatusLabel, TableView tableView, TableColumn colDate, TableColumn colId, TableColumn colStatus, ObservableList<ReportRow> data) {
+    public DeleteReportController(TableColumn colTime, Label deleteStatusLabel, TableView tableView, TableColumn colDate, TableColumn colId, TableColumn colStatus, ObservableList<ReportRow> data) {
         this.colTime = colTime;
         this.deleteStatusLabel = deleteStatusLabel;
         this.tableView = tableView;
         this.colDate = colDate;
         this.colId = colId;
         this.colStatus = colStatus;
-        this.data = data;
 
 
     }
@@ -107,18 +105,13 @@ public class deletereportcontroller
         colStatus.setCellValueFactory(c -> new SimpleStringProperty(c.getClass().toGenericString()));
         tableView.setItems(data);
 
-        data.addAll(
-                new ReportRowBuilder().setId("INC-AAA1").setDate("2025-11-12").setType("Accident").setStatus("New").createReportRow(),
-                new ReportRowBuilder().setId("INC-BBB2").setDate("2025-11-13").setType("Obstruction").setStatus("Resolved").createReportRow()
-        );
-    }
 
-}
+    }
 
     @FXML
     public void oaDeleteSelected(Event event) {
         ChoiceBox<Object> reportsTable = null;
-        ReportRow sel = (ReportRow) reportsTable.getSelectionModel().getSelectedItem();
+        MyReportsController.ReportRow sel = (MyReportsController.ReportRow) reportsTable.getSelectionModel().getSelectedItem();
         BreakIterator deleteStatusLabel = null;
         if (sel == null) {
             deleteStatusLabel.setText("Select a report first.");
@@ -136,16 +129,4 @@ public class deletereportcontroller
             }
         });
     }
-
-public static class ReportRow extends ClipboardAssistance {
-    public String id, date, type, status;
-    public ReportRow(String id, String date, String type, String status){
-        this.id=id;this.date=date;this.type=type;this.status=status;}
 }
-
-
-
-void main() {
-}
-
-private Clipboard data;
