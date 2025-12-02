@@ -1,7 +1,7 @@
 package com.group13.oopprojectgroup13traffic_management.MaryChowdhury;
 
-import com.sun.javafx.collections.ElementObservableListDecorator;
-import com.sun.javafx.collections.ObservableListWrapper;
+//import com.sun.javafx.collections.ElementObservableListDecorator;
+//import com.sun.javafx.collections.ObservableListWrapper;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -137,11 +137,11 @@ public class IncidentReportFormController
             statusLabel.setText("Time must be HH:mm");
             return;
         }
-        ObservableListWrapper<Object> allowedTypes = null;
-        if (!allowedTypes.contains(type)) {
-            statusLabel.setText("Invalid incident type.");
-            return;
-
-
-        }
+//        ObservableListWrapper<Object> allowedTypes = null;
+//        if (!allowedTypes.contains(type)) {
+//            statusLabel.setText("Invalid incident type.");
+//            return;
+//
+//
+//        }
     }}
