@@ -9,5 +9,6 @@
    <children>
       <TextArea fx:id="demoTextArea" layoutX="149.0" layoutY="58.0" prefHeight="200.0" prefWidth="200.0" />
       <TextField fx:id="textField" layoutX="36.0" layoutY="277.0" />
+      <TextField fx:id="textField1" layoutX="249.0" layoutY="290.0" />
    </children>
 </AnchorPane>
