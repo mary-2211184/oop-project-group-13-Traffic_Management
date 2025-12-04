@@ -13,7 +13,6 @@ public class PayPassesController {
 
     @FXML
     public void initialize() {
-        // Initialization code if needed
     }
 
     @FXML
