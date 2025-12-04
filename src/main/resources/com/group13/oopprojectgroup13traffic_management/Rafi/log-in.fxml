@@ -1,14 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.group13.oopprojectgroup13traffic_management.Rafi.LogInController"
-            prefHeight="400.0" prefWidth="600.0">
 
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.group13.oopprojectgroup13traffic_management.Rafi.LogInController">
+   <children>
+      <Label layoutX="66.0" layoutY="89.0" text="User Id" />
+      <Label layoutX="59.0" layoutY="131.0" text="Password" />
+      <TextField fx:id="UserID" layoutX="139.0" layoutY="84.0" prefHeight="26.0" prefWidth="302.0" />
+      <PasswordField fx:id="Password" layoutX="139.0" layoutY="126.0" prefHeight="26.0" prefWidth="302.0" promptText="min 8 digit" />
+      <ComboBox fx:id="catagory" layoutX="163.0" layoutY="200.0" prefWidth="150.0" />
+      <Button layoutX="238.0" layoutY="292.0" mnemonicParsing="false" onAction="#signIN" text="Sign in" />
+   </children>
 </AnchorPane>
