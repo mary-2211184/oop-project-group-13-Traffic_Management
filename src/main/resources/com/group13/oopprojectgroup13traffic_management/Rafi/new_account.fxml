@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="700.0" prefWidth="762.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.group13.oopprojectgroup13traffic_management.Rafi.NewAccountController">
+   <children>
+      <TextField fx:id="user_name" layoutX="164.0" layoutY="81.0" prefHeight="38.0" prefWidth="554.0" />
+      <TextField fx:id="user_id" layoutX="164.0" layoutY="144.0" prefHeight="38.0" prefWidth="554.0" />
+      <TextField fx:id="nid" layoutX="164.0" layoutY="207.0" prefHeight="38.0" prefWidth="554.0" />
+      <Button layoutX="242.0" layoutY="653.0" mnemonicParsing="false" onAction="#submit" text="Submit" />
+      <Button layoutX="440.0" layoutY="653.0" mnemonicParsing="false" onAction="#cancle" text="Cancel" />
+      <Label layoutX="48.0" layoutY="81.0" text="User Nmae" />
+      <TextField fx:id="lic_num" layoutX="164.0" layoutY="265.0" prefHeight="38.0" prefWidth="554.0" />
+      <TextField fx:id="phn" layoutX="168.0" layoutY="331.0" prefHeight="38.0" prefWidth="554.0" />
+      <TextField fx:id="pass" layoutX="164.0" layoutY="471.0" prefHeight="38.0" prefWidth="554.0" />
+      <TextField fx:id="re_pass" layoutX="163.0" layoutY="529.0" prefHeight="38.0" prefWidth="554.0" />
+      <Label layoutX="59.0" layoutY="154.0" text="UserID" />
+      <Label layoutX="67.0" layoutY="217.0" text="NID" />
+      <Label layoutX="36.0" layoutY="275.0" text="Driving Licenses" />
+      <Label layoutX="48.0" layoutY="350.0" text="Phone " />
+      <Label layoutX="53.0" layoutY="481.0" text="Password" />
+      <Label layoutX="32.0" layoutY="539.0" text="rewrite Password" />
+      <Label layoutX="189.0" layoutY="20.0" text="We will be happy to support you">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="48.0" layoutY="399.0" prefHeight="56.0" prefWidth="510.0" text="Password must contain atleast a number and a Special charecter (!@#$...)">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <CheckBox fx:id="check" layoutX="168.0" layoutY="582.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="401.0" text="By clicking this you are agreeing to our Terms and Policies">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </CheckBox>
+   </children>
+</AnchorPane>
