@@ -1,5 +1,8 @@
 package com.group13.oopprojectgroup13traffic_management.Mobasshira_Akter.TCA;
 
+import javafx.event.ActionEvent;
+import javafx.scene.control.*;
+
 public class IncidentManagementController
 {
     @javafx.fxml.FXML

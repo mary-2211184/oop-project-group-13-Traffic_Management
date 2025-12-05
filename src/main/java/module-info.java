@@ -1,7 +1,8 @@
+
 module com.group13.oopprojectgroup13traffic_management {
     requires javafx.controls;
     requires javafx.fxml;
-    requires jdk.hotspot.agent;
+    requires java.logging;
 
 
     opens com.group13.oopprojectgroup13traffic_management to javafx.fxml;
@@ -10,6 +11,7 @@ module com.group13.oopprojectgroup13traffic_management {
     exports com.group13.oopprojectgroup13traffic_management.Limu.ParkingsystemManager;
     opens com.group13.oopprojectgroup13traffic_management.Limu.policymaker to javafx.fxml;
     exports com.group13.oopprojectgroup13traffic_management.Limu.policymaker;
+
 
     opens com.group13.oopprojectgroup13traffic_management.Rafi to javafx.fxml;
     exports com.group13.oopprojectgroup13traffic_management.Rafi;

@@ -2,15 +2,14 @@ package com.group13.oopprojectgroup13traffic_management.MaryChowdhury;
 
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 
 public class AssignReportController{
-    @FXML public ComboBox<String> reportSelector;
-    @FXML public ComboBox<String> officerSelector;
-    @FXML public Label reportInfo;
-    @FXML public Label assignStatus;
+    public ComboBox<String> reportSelector;
+    public ComboBox<String> officerSelector;
+    public Label reportInfo;
+    public Label assignStatus;
 
     public ComboBox<String> getReportSelector() {
         return reportSelector;

@@ -2,7 +2,6 @@ package com.group13.oopprojectgroup13traffic_management.MaryChowdhury;
 
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
@@ -11,10 +10,10 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 public class CloseReportController{
-    @FXML public ComboBox<String> reportSelector;
-    @FXML public Label statusLabel;
-    @FXML public TextArea closingNotes;
-    @FXML public Label resultLabel;
+    public ComboBox<String> reportSelector;
+    public Label statusLabel;
+    public TextArea closingNotes;
+    public Label resultLabel;
 
     public ComboBox<String> getReportSelector() {
         return reportSelector;

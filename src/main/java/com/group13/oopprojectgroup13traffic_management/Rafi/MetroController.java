@@ -5,12 +5,39 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.CheckBox;
+import javafx.scene.control.DatePicker;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
 public class MetroController
 {
+    @javafx.fxml.FXML
+    private DatePicker date;
+    @javafx.fxml.FXML
+    private TextField cvc;
+    @javafx.fxml.FXML
+    private TextField card_number;
+    @javafx.fxml.FXML
+    private CheckBox female_rsv;
+    @javafx.fxml.FXML
+    private CheckBox terms;
+    @javafx.fxml.FXML
+    private TextField nam_on_card;
+    @javafx.fxml.FXML
+    private TextField from;
+    @javafx.fxml.FXML
+    private TextField exp_date;
+    @javafx.fxml.FXML
+    private TextField time;
+    @javafx.fxml.FXML
+    private TextField to;
+    @javafx.fxml.FXML
+    private TextField pay_ammount;
+
     @javafx.fxml.FXML
     public void initialize() {
     }
@@ -76,5 +103,9 @@ public class MetroController
             e.printStackTrace();
             // Handle the exception appropriately (show error message, etc.)
         }
+    }
+
+    @javafx.fxml.FXML
+    public void checkout(ActionEvent actionEvent) {
     }
 }
