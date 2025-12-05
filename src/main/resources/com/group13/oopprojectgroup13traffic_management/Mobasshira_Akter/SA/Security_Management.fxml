@@ -1,14 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.group13.oopprojectgroup13traffic_management.Mobasshira_Akter.SA.SecurityManagementController"
-            prefHeight="400.0" prefWidth="600.0">
 
+<AnchorPane prefHeight="285.0" prefWidth="356.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.group13.oopprojectgroup13traffic_management.Mobasshira_Akter.SA.SecurityManagementController">
+   <children>
+      <Label layoutX="117.0" layoutY="20.0" text="Security Management" />
+      <Button layoutX="242.0" layoutY="193.0" mnemonicParsing="false" onAction="#smfrOA" text="Firewall Rules" />
+      <TableView fx:id="smTV" layoutX="27.0" layoutY="103.0" onSort="#smanagementTV" prefHeight="78.0" prefWidth="301.0">
+        <columns>
+          <TableColumn fx:id="smtvstTC" prefWidth="112.7999324798584" text="Securirty Type" />
+          <TableColumn fx:id="smtvsTC" prefWidth="83.2000732421875" text="Status" />
+            <TableColumn fx:id="smtvrlTC" prefWidth="105.5999755859375" text="Risk Level" />
+        </columns>
+      </TableView>
+      <Button layoutX="146.0" layoutY="193.0" mnemonicParsing="false" onAction="#smemOA" text="Enable MFA" />
+      <Button layoutX="27.0" layoutY="193.0" mnemonicParsing="false" onAction="#smppOA" text="Password Policy" />
+      <Button layoutX="195.0" layoutY="233.0" mnemonicParsing="false" onAction="#smcOA" text="Confirm" />
+      <Button layoutX="114.0" layoutY="233.0" mnemonicParsing="false" onAction="#smbOA" text="Back" />
+      <Button layoutX="258.0" layoutY="56.0" mnemonicParsing="false" onAction="#smrOA" text="Refresh" />
+   </children>
 </AnchorPane>
