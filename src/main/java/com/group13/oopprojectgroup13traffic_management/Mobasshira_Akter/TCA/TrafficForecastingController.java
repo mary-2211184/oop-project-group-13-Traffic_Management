@@ -33,7 +33,11 @@ public class TrafficForecastingController
     public void gfOA(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void bOA3(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void btfOA(ActionEvent actionEvent) {
     }
 }

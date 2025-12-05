@@ -6,6 +6,29 @@ public class SignalOptimizationController
 {
 
     @javafx.fxml.FXML
+    private TableColumn svttTc;
+    @javafx.fxml.FXML
+    private TableColumn svtclTC;
+    @javafx.fxml.FXML
+    private TableColumn svtrTC;
+    @javafx.fxml.FXML
+    private TextField yssTF;
+    @javafx.fxml.FXML
+    private TableColumn svtyTC;
+    @javafx.fxml.FXML
+    private TableColumn svtgTC;
+    @javafx.fxml.FXML
+    private TableView svtTV;
+    @javafx.fxml.FXML
+    private TextField rssTF;
+    @javafx.fxml.FXML
+    private TextField gssTF;
+    @javafx.fxml.FXML
+    private ComboBox aaisCM;
+    @javafx.fxml.FXML
+    private TableColumn svtvcTc;
+
+    @javafx.fxml.FXML
     public void initialize() {
     }
 
@@ -15,5 +38,17 @@ public class SignalOptimizationController
 
     @Deprecated
     public void rbOA(ActionEvent actionEvent) {
+    }
+
+    @Deprecated
+    public void btmOA(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void sobOA(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void antOA(ActionEvent actionEvent) {
     }
 }

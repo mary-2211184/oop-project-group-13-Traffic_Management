@@ -1,11 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.group13.oopprojectgroup13traffic_management.Mobasshira_Akter.TCA.SignalOptimizationController">
+<AnchorPane prefHeight="458.0" prefWidth="611.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.group13.oopprojectgroup13traffic_management.Mobasshira_Akter.TCA.SignalOptimizationController">
    <children>
-      <Label layoutX="255.0" layoutY="21.0" text="Signal Optimization" />
+      <Label layoutX="256.0" layoutY="21.0" text="Signal Optimization" />
+      <Button layoutX="345.0" layoutY="178.0" mnemonicParsing="false" onAction="#antOA" text="Apply New Timings" />
+      <ComboBox fx:id="aaisCM" layoutX="118.0" layoutY="97.0" prefHeight="26.0" prefWidth="211.0" promptText="Area And Intersection Selection" />
+      <Label layoutX="67.0" layoutY="101.0" text="Area:" />
+      <TableView fx:id="svtTV" layoutX="51.0" layoutY="274.0" prefHeight="115.0" prefWidth="504.0">
+        <columns>
+          <TableColumn fx:id="svtrTC" prefWidth="75.0" text="Red " />
+          <TableColumn fx:id="svtyTC" prefWidth="75.0" text="Yellow" />
+            <TableColumn fx:id="svtgTC" prefWidth="75.0" text="Green" />
+            <TableColumn fx:id="svttTc" prefWidth="75.0" text="Time" />
+            <TableColumn fx:id="svtvcTc" prefWidth="94.4000244140625" text="Vehicle Count" />
+            <TableColumn fx:id="svtclTC" prefWidth="104.80001220703127" text="Congestion Level" />
+        </columns>
+      </TableView>
+      <TextField fx:id="rssTF" layoutX="121.0" layoutY="137.0" promptText="Red Signal Second" />
+      <Label layoutX="69.0" layoutY="141.0" text="Red:" />
+      <Label layoutX="63.0" layoutY="182.0" text="Yello:" />
+      <Label layoutX="56.0" layoutY="224.0" text="Green:" />
+      <TextField fx:id="gssTF" layoutX="119.0" layoutY="221.0" promptText="Green Signal Second" />
+      <TextField fx:id="yssTF" layoutX="119.0" layoutY="178.0" promptText="Yellow Signal Second" />
+      <Button layoutX="495.0" layoutY="410.0" mnemonicParsing="false" onAction="#sobOA" text="Back" />
    </children>
 </AnchorPane>

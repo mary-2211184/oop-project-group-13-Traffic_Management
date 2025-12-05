@@ -17,8 +17,6 @@ public class ReportsController
     @javafx.fxml.FXML
     private TableColumn reportsLocationTC;
     @javafx.fxml.FXML
-    private TableColumn reportsIncidentsTC;
-    @javafx.fxml.FXML
     private TableColumn reportsDateTC;
     @javafx.fxml.FXML
     private TableColumn reportsCongestionLevelTC;
@@ -26,6 +24,8 @@ public class ReportsController
     private DatePicker dpLD;
     @javafx.fxml.FXML
     private TableColumn reportsTrafficDencityTC;
+    @javafx.fxml.FXML
+    private TableColumn reportsCongestionLevelTC1;
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -41,5 +41,9 @@ public class ReportsController
 
     @javafx.fxml.FXML
     public void generatereportOA(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void bOAR(ActionEvent actionEvent) {
     }
 }

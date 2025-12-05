@@ -26,6 +26,6 @@
         </columns>
       </TableView>
       <Label layoutX="81.0" layoutY="194.0" text="Select Forecast Time:" />
-      <Button layoutX="717.0" layoutY="504.0" mnemonicParsing="false" onAction="#bOA3" text="Back" />
+      <Button layoutX="717.0" layoutY="504.0" mnemonicParsing="false" onAction="#btfOA" text="Back" />
    </children>
 </AnchorPane>
