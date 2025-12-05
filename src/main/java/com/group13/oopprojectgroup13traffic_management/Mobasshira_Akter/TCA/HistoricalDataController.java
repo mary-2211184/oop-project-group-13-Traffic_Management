@@ -44,4 +44,8 @@ public class HistoricalDataController
     @javafx.fxml.FXML
     public void loadDataOA(ActionEvent actionEvent) {
     }
+
+    @javafx.fxml.FXML
+    public void hdbOA(ActionEvent actionEvent) {
+    }
 }

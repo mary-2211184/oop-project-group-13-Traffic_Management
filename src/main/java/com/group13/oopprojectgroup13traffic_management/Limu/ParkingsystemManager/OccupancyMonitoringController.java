@@ -5,3 +5,4 @@ public class OccupancyMonitoringController
     @javafx.fxml.FXML
     public void initialize() {
     }}
+

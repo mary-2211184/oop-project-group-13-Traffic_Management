@@ -26,6 +26,6 @@
       <Button layoutX="493.0" layoutY="300.0" mnemonicParsing="false" onAction="#rbOA" text="Refresh" />
       <ComboBox fx:id="afCB" layoutX="245.0" layoutY="246.0" prefWidth="150.0" />
       <Label layoutX="161.0" layoutY="248.0" text="Area Filter:" />
-      <Button layoutX="644.0" layoutY="602.0" mnemonicParsing="false" onAction="#bOA2" text="Back" />
+      <Button layoutX="644.0" layoutY="602.0" mnemonicParsing="false" onAction="#btmOA" text="Back" />
    </children>
 </AnchorPane>

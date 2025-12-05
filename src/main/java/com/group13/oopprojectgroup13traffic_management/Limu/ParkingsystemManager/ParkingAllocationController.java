@@ -4,4 +4,5 @@ public class ParkingAllocationController
 {
     @javafx.fxml.FXML
     public void initialize() {
+
     }}

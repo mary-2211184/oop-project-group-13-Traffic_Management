@@ -45,11 +45,15 @@ public class TrafficControlAdminDashboardController
     public void hdOA(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void bOA1(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML
     public void loOA(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void btcadOA(ActionEvent actionEvent) {
     }
 }
