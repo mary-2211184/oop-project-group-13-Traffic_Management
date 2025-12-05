@@ -14,7 +14,7 @@
       <TextField fx:id="user_id" layoutX="164.0" layoutY="144.0" prefHeight="38.0" prefWidth="554.0" />
       <TextField fx:id="nid" layoutX="164.0" layoutY="207.0" prefHeight="38.0" prefWidth="554.0" />
       <Button layoutX="242.0" layoutY="653.0" mnemonicParsing="false" onAction="#submit" text="Submit" />
-      <Button layoutX="440.0" layoutY="653.0" mnemonicParsing="false" onAction="#cancle" text="Cancle" />
+      <Button layoutX="440.0" layoutY="653.0" mnemonicParsing="false" onAction="#cancle" text="Cancel" />
       <Label layoutX="48.0" layoutY="81.0" text="User Nmae" />
       <TextField fx:id="lic_num" layoutX="164.0" layoutY="265.0" prefHeight="38.0" prefWidth="554.0" />
       <TextField fx:id="phn" layoutX="168.0" layoutY="331.0" prefHeight="38.0" prefWidth="554.0" />

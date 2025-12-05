@@ -5,7 +5,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.group13.oopprojectgroup13traffic_management.Rafi.PayPassesController">
    <children>
       <Button layoutX="84.0" layoutY="178.0" mnemonicParsing="false" onAction="#metro_action" prefHeight="83.0" prefWidth="138.0" text="Metro">
@@ -18,10 +17,20 @@
             <Font size="34.0" />
          </font>
       </Button>
-      <Label layoutX="84.0" layoutY="34.0" prefHeight="90.0" prefWidth="498.0" text="please select an option bellow">
+      <Label layoutX="84.0" layoutY="34.0" prefHeight="90.0" prefWidth="498.0" text="Please select an option bellow">
          <font>
             <Font size="32.0" />
          </font>
       </Label>
+      <Button layoutX="84.0" layoutY="290.0" mnemonicParsing="false" onAction="#dashboard" prefHeight="83.0" prefWidth="138.0" text="Dashboard">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Button>
+      <Button layoutX="397.0" layoutY="290.0" mnemonicParsing="false" onAction="#signout" prefHeight="83.0" prefWidth="137.0" text="Sign out">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>
