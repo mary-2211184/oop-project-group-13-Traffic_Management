@@ -120,11 +120,7 @@ public class GenerateSummaryController
         }
         String type = typeComboBox.getCellFactory().toString();
 
-        // TODO: fetch and compute stats from DB
-        metricTableView.clipProperty();
-        metricTableView.equals(
-                new MetricRow("Total incidents", "42")
-        );
+
         generateStatusLabel.setText(STR."Summary generated for \{f} to \{t}");
     }
 

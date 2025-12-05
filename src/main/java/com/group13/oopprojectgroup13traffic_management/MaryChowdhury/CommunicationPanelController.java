@@ -3,17 +3,16 @@ package com.group13.oopprojectgroup13traffic_management.MaryChowdhury;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.Event;
-import javafx.fxml.FXML;
 import javafx.scene.control.*;
 
 public class CommunicationPanelController {
-    @FXML public ComboBox<String> reportSelector;
-    @FXML public TableView<Object> messageHistory;
-    @FXML public TableColumn<MessageRow,String> colFrom;
-    @FXML public TableColumn<MessageRow,String> colWhen;
-    @FXML public TableColumn<MessageRow,String> colText;
-    @FXML public TextArea messageArea;
-    @FXML public Label msgStatus;
+    public ComboBox<String> reportSelector;
+    public TableView<Object> messageHistory;
+    public TableColumn<MessageRow,String> colFrom;
+    public TableColumn<MessageRow,String> colWhen;
+    public TableColumn<MessageRow,String> colText;
+    public TextArea messageArea;
+    public Label msgStatus;
 
     private ObservableList<Object> messages = FXCollections.observableArrayList();
 
