@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.group13.oopprojectgroup13traffic_management.MaryChowdhury.FeedbackController">
+   <children>
+      <TextField fx:id="reportIdField" layoutX="145.0" layoutY="34.0" />
+      <TextArea fx:id="feedbackArea" layoutX="129.0" layoutY="75.0" prefHeight="128.0" prefWidth="200.0" />
+      <Text layoutX="49.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Report Id" />
+      <Text layoutX="49.0" layoutY="126.0" strokeType="OUTSIDE" strokeWidth="0.0" text="feedback area" />
+      <ChoiceBox fx:id="ratingChoiceBox" layoutX="145.0" layoutY="236.0" prefWidth="150.0" />
+      <Text layoutX="60.0" layoutY="241.0" strokeType="OUTSIDE" strokeWidth="0.0" text="rating choice" />
+      <Button layoutX="56.0" layoutY="320.0" mnemonicParsing="false" onAction="#oaSubmitFeedback" text="Submit Feedback" />
+      <Label fx:id="resultLabel" layoutX="451.0" layoutY="30.0" text="Result" />
+   </children>
+</AnchorPane>

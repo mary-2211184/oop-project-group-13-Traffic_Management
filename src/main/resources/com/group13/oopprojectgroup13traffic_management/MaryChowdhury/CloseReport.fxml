@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.group13.oopprojectgroup13traffic_management.MaryChowdhury.CloseReportController">
+   <children>
+      <ComboBox fx:id="reportSelectorComboBox" layoutX="150.0" layoutY="27.0" prefWidth="150.0" />
+      <Text layoutX="42.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Report Selector" />
+      <Label fx:id="statusLabel" layoutX="443.0" layoutY="31.0" text="Status" />
+      <Label fx:id="resultLabel" layoutX="443.0" layoutY="69.0" text="Result" />
+      <TextArea fx:id="closingNotesArea" layoutX="141.0" layoutY="69.0" prefHeight="129.0" prefWidth="200.0" />
+      <Text layoutX="42.0" layoutY="130.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Closing Notes" />
+      <Button layoutX="41.0" layoutY="236.0" mnemonicParsing="false" onAction="#oaMarkClosed" text="Mark Closed" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.group13.oopprojectgroup13traffic_management.MaryChowdhury.TrackStatusController">
+   <children>
+      <TableView fx:id="statusTableView" layoutX="23.0" layoutY="186.0" prefHeight="200.0" prefWidth="522.0">
+        <columns>
+          <TableColumn fx:id="colId" prefWidth="129.33334350585938" text="Id" />
+          <TableColumn fx:id="colType" minWidth="0.0" prefWidth="114.6666259765625" text="Type" />
+            <TableColumn fx:id="colTimeStamp" minWidth="0.0" prefWidth="111.3333740234375" text="Timestamp" />
+            <TableColumn fx:id="colStatus" minWidth="0.0" prefWidth="142.66668701171875" text="Status" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

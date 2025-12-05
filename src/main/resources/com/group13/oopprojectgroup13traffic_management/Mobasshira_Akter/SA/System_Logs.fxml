@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+<<<<<<<< HEAD:src/main/resources/com/group13/oopprojectgroup13traffic_management/Mobasshira_Akter/SA/System_Logs.fxml
+            fx:controller="com.group13.oopprojectgroup13traffic_management.Mobasshira_Akter.SA.SystemLogsController"
+========
+            fx:controller="com.group13.oopprojectgroup13traffic_management.MaryChowdhury.FeedbackController"
+>>>>>>>> origin/master:src/main/resources/com/group13/oopprojectgroup13traffic_management/MaryChowdhury/Feedback.fxml
+            prefHeight="400.0" prefWidth="600.0">
+
+</AnchorPane>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane onDragDetected="#anfOA" prefHeight="421.0" prefWidth="618.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.group13.oopprojectgroup13traffic_management.Mobasshira_Akter.TCA.AlertsNotificationController">
+   <children>
+      <Label layoutX="254.0" layoutY="25.0" text="Alerts And Notification" />
+      <TextField fx:id="anlTF" layoutX="422.0" layoutY="105.0" text="Search Location" />
+      <ComboBox fx:id="answaCB" layoutX="143.0" layoutY="103.0" prefWidth="150.0" />
+      <DatePicker fx:id="anddpLD" layoutX="143.0" layoutY="142.0" />
+      <TableView fx:id="anTV" layoutX="59.0" layoutY="237.0" prefHeight="118.0" prefWidth="526.0">
+        <columns>
+          <TableColumn fx:id="antvaiTC" prefWidth="75.0" text="Alerts ID" />
+          <TableColumn fx:id="antvtTC" prefWidth="75.0" text="Type" />
+            <TableColumn fx:id="antvsTC" prefWidth="75.0" text="Severity" />
+            <TableColumn fx:id="antvlTC" prefWidth="75.0" text="Location" />
+            <TableColumn fx:id="antvantTC" prefWidth="75.0" text="Time" />
+            <TableColumn fx:id="antvdTC" prefWidth="75.0" text="Date" />
+            <TableColumn fx:id="antvansTC" prefWidth="75.0" text="Status" />
+        </columns>
+      </TableView>
+      <Button layoutX="309.0" layoutY="192.0" mnemonicParsing="false" text="Filter" />
+      <Button layoutX="22.0" layoutY="374.0" mnemonicParsing="false" onAction="#anaOA" text="Acknowledged" />
+      <Label layoutX="29.0" layoutY="107.0" text="Severity Wise Alert:" />
+      <Label layoutX="60.0" layoutY="146.0" text="Date:" />
+      <Label layoutX="356.0" layoutY="108.0" text="Location:" />
+      <Label layoutX="347.0" layoutY="145.0" text="Alert Type:" />
+      <TextField fx:id="anatTF" layoutX="422.0" layoutY="142.0" text="Search Alert" />
+      <Button layoutX="560.0" layoutY="375.0" mnemonicParsing="false" onAction="#anbOA" text="back" />
+   </children>
+</AnchorPane>
