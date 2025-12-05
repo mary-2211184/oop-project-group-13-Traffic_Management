@@ -16,7 +16,7 @@ import java.io.IOException;
 public class LogInController
 {
     @javafx.fxml.FXML
-    private ComboBox catagory;
+    private ComboBox category;
 
     @javafx.fxml.FXML
     private TextField UserID;
@@ -27,15 +27,15 @@ public class LogInController
     @javafx.fxml.FXML
     public void initialize() {
         // Add items to the ComboBox
-        catagory.getItems().add("General commuter");
-        catagory.getItems().add("Public transport coordinator");
-        catagory.setPromptText("Select Category");
+        category.getItems().add("General commuter");
+        category.getItems().add("Public transport coordinator");
+        category.setPromptText("Select Category");
     }
 
     @javafx.fxml.FXML
     public void signIN(ActionEvent actionEvent) {
         // Check if category is selected
-        if (catagory.getValue() == null) {
+        if (category.getValue() == null) {
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Error");
             alert.setHeaderText(null);
@@ -99,7 +99,7 @@ public class LogInController
         }
 
         // All validations passed, now navigate to correct scene
-        String selectedCategory = (String) catagory.getValue();
+        String selectedCategory = (String) category.getValue();
         String fxmlFile = "";
 
         if (selectedCategory.equals("General commuter")) {
