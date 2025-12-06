@@ -1,5 +1,9 @@
 package com.group13.oopprojectgroup13traffic_management.Mobasshira_Akter.SA;
 
+import javafx.event.ActionEvent;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+
 public class SystemConfigurationController
 {
     @javafx.fxml.FXML

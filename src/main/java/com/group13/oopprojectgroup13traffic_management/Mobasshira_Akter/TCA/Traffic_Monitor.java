@@ -1,32 +1,98 @@
 package com.group13.oopprojectgroup13traffic_management.Mobasshira_Akter.TCA;
 
-import javafx.event.ActionEvent;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+public class Traffic_Monitor {
+    private String currentPeakArea,highestCongestionLevel,areaFilterArea;
+    private int totalActiveCamera,averageTrafficFlow,date,time,vehicleCount;
 
-public class Traffic_Monitor
-{
-    @javafx.fxml.FXML
-    private ComboBox afCB;
-    @javafx.fxml.FXML
-    private TableColumn tmtvvcTC;
-    @javafx.fxml.FXML
-    private TableColumn tmtvDTC;
-    @javafx.fxml.FXML
-    private TableColumn tmtvtTC;
-    @javafx.fxml.FXML
-    private TableColumn tmtvATC;
-    @javafx.fxml.FXML
-    private TableColumn tmtvclTC;
-    @javafx.fxml.FXML
-    private TableView tmTV;
-
-    @javafx.fxml.FXML
-    public void initialize() {
+    public void TrafficMonitor(String currentPeakArea, String highestCongestionLevel, String areaFilterArea, int totalActiveCamera, int averageTrafficFlow, int date, int time, int vehicleCount) {
+        this.currentPeakArea = currentPeakArea;
+        this.highestCongestionLevel = highestCongestionLevel;
+        this.areaFilterArea = areaFilterArea;
+        this.totalActiveCamera = totalActiveCamera;
+        this.averageTrafficFlow = averageTrafficFlow;
+        this.date = date;
+        this.time = time;
+        this.vehicleCount = vehicleCount;
     }
 
-    @javafx.fxml.FXML
-    public void rbOA(ActionEvent actionEvent) {
+    public String getCurrentPeakArea() {
+        return currentPeakArea;
     }
+
+    public void setCurrentPeakArea(String currentPeakArea) {
+        this.currentPeakArea = currentPeakArea;
+    }
+
+    public String getHighestCongestionLevel() {
+        return highestCongestionLevel;
+    }
+
+    public void setHighestCongestionLevel(String highestCongestionLevel) {
+        this.highestCongestionLevel = highestCongestionLevel;
+    }
+
+    public String getAreaFilterArea() {
+        return areaFilterArea;
+    }
+
+    public void setAreaFilterArea(String areaFilterArea) {
+        this.areaFilterArea = areaFilterArea;
+    }
+
+    public int getTotalActiveCamera() {
+        return totalActiveCamera;
+    }
+
+    public void setTotalActiveCamera(int totalActiveCamera) {
+        this.totalActiveCamera = totalActiveCamera;
+    }
+
+    public int getAverageTrafficFlow() {
+        return averageTrafficFlow;
+    }
+
+    public void setAverageTrafficFlow(int averageTrafficFlow) {
+        this.averageTrafficFlow = averageTrafficFlow;
+    }
+
+    public int getDate() {
+        return date;
+    }
+
+    public void setDate(int date) {
+        this.date = date;
+    }
+
+    public int getTime() {
+        return time;
+    }
+
+    public void setTime(int time) {
+        this.time = time;
+    }
+
+    public int getVehicleCount() {
+        return vehicleCount;
+    }
+
+    public void setVehicleCount(int vehicleCount) {
+        this.vehicleCount = vehicleCount;
+    }
+
+    @Override
+    public String toString() {
+        return "TrafficMonitor{" +
+                "currentPeakArea='" + currentPeakArea + '\'' +
+                ", highestCongestionLevel='" + highestCongestionLevel + '\'' +
+                ", areaFilterArea='" + areaFilterArea + '\'' +
+                ", totalActiveCamera=" + totalActiveCamera +
+                ", averageTrafficFlow=" + averageTrafficFlow +
+                ", date=" + date +
+                ", time=" + time +
+                ", vehicleCount=" + vehicleCount +
+                '}';
+    }
+
+
 }
+

@@ -1,5 +1,9 @@
 package com.group13.oopprojectgroup13traffic_management.Mobasshira_Akter.SA;
 
+import javafx.event.ActionEvent;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+
 public class SystemPerformanceController
 {
     @javafx.fxml.FXML
@@ -12,8 +16,6 @@ public class SystemPerformanceController
     private TableColumn sptvsTC;
     @javafx.fxml.FXML
     private TableColumn sptvseverityTC;
-    @javafx.fxml.FXML
-    private TableColumn sptvsperformancetTC;
     @javafx.fxml.FXML
     private TableColumn sptvnTC;
 

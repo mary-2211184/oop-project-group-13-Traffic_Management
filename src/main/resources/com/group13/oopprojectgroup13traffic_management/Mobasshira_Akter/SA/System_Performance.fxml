@@ -15,14 +15,13 @@
           <TableColumn fx:id="sptvdTC" prefWidth="42.40003967285156" text="Date" />
           <TableColumn fx:id="sptvtTC" prefWidth="37.60003662109375" text="Time" />
             <TableColumn fx:id="sptvseverityTC" prefWidth="55.20001220703125" text="Severity" />
-            <TableColumn fx:id="sptvsperformancetTC" prefWidth="51.199951171875" text="Time" />
-            <TableColumn fx:id="sptvnTC" prefWidth="51.199951171875" text="Notes" />
-            <TableColumn fx:id="sptvsTC" prefWidth="51.199951171875" text="Status" />
+            <TableColumn fx:id="sptvnTC" prefWidth="76.79998779296875" text="Notes" />
+            <TableColumn fx:id="sptvsTC" prefWidth="77.60002136230469" text="Status" />
         </columns>
       </TableView>
       <Label layoutX="37.0" layoutY="79.0" text="Up Time:" />
       <Label layoutX="214.0" layoutY="82.0" text="Latency:" />
       <Button layoutX="274.0" layoutY="252.0" mnemonicParsing="false" onAction="#smsOA" text="Save" />
-      <Label layoutX="36.0" layoutY="119.0" text="Date Wise Performance Report:" />
+      <Label layoutX="36.0" layoutY="119.0" text="Date Wise Performance Report" />
    </children>
 </AnchorPane>
