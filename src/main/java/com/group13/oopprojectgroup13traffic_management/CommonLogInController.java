@@ -19,7 +19,7 @@ public class CommonLogInController {
     @FXML
     private TextField useridtf;
 
-    @Deprecated
+    @FXML
     public void loginButton(ActionEvent actionEvent) throws IOException {
         String username = useridtf.getText();
         String password = passwordfield.getText();

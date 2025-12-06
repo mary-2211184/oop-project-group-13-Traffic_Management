@@ -11,7 +11,7 @@
       <TextField fx:id="useridtf" layoutX="225.0" layoutY="123.0" />
       <Label layoutX="180.0" layoutY="127.0" text="ID" />
       <Label layoutX="166.0" layoutY="178.0" text="Pass" />
-      <Button layoutX="281.0" layoutY="223.0" mnemonicParsing="false" onAction="#oaLogIn" text="Log in" />
       <PasswordField fx:id="passwordfield" layoutX="226.0" layoutY="174.0" />
+      <Button layoutX="248.0" layoutY="255.0" mnemonicParsing="false" onAction="#loginButton" text="Login" />
    </children>
 </AnchorPane>
