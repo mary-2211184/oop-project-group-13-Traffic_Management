@@ -12,7 +12,9 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.stage.Stage;
 import javafx.scene.Node;
-import java.io.IOException;
+import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class NewAccountController
 {
@@ -33,11 +35,16 @@ public class NewAccountController
     @javafx.fxml.FXML
     private CheckBox check;
     @FXML
-    private ComboBox acc_type;
+    private ComboBox<String> acc_type;
+
+    // File name for storing user data
+    private static final String USER_DATA_FILE = "user_data.bin";
 
     @javafx.fxml.FXML
     public void initialize() {
-        // Initialization code if needed
+        // Add account type options to ComboBox
+        acc_type.getItems().addAll("General commuter", "Public transport coordinator");
+        acc_type.setPromptText("Select Account Type");
     }
 
     @javafx.fxml.FXML
@@ -52,6 +59,12 @@ public class NewAccountController
                 re_pass.getText().trim().isEmpty()) {
 
             showErrorAlert("Please fill all the fields.");
+            return;
+        }
+
+        // Check if account type is selected
+        if (acc_type.getValue() == null) {
+            showErrorAlert("Please select an account type.");
             return;
         }
 
@@ -90,15 +103,26 @@ public class NewAccountController
             return;
         }
 
-        // All validations passed - show success message and go to login page
-        Alert successAlert = new Alert(AlertType.INFORMATION);
-        successAlert.setTitle("Success");
-        successAlert.setHeaderText("Congratulations!");
-        successAlert.setContentText("Your account has been created successfully!");
-        successAlert.showAndWait();
+        // Check if user ID already exists
+        if (isUserIdExists(user_id.getText())) {
+            showErrorAlert("User ID already exists. Please choose a different User ID.");
+            return;
+        }
 
-        // After showing success message, go to login page
-        goToLoginPage(actionEvent);
+        // Create and save user object
+        if (saveUserData()) {
+            // All validations passed - show success message and go to login page
+            Alert successAlert = new Alert(AlertType.INFORMATION);
+            successAlert.setTitle("Success");
+            successAlert.setHeaderText("Congratulations!");
+            successAlert.setContentText("Your account has been created successfully!");
+            successAlert.showAndWait();
+
+            // After showing success message, go to login page
+            goToLoginPage(actionEvent);
+        } else {
+            showErrorAlert("Error saving user data. Please try again.");
+        }
     }
 
     @javafx.fxml.FXML
@@ -126,6 +150,80 @@ public class NewAccountController
         } catch (IOException e) {
             e.printStackTrace();
             showErrorAlert("Cannot load login page.");
+        }
+    }
+
+    // Check if user ID already exists
+    private boolean isUserIdExists(String userId) {
+        File file = new File(USER_DATA_FILE);
+        if (!file.exists()) {
+            return false;
+        }
+
+        try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(file))) {
+            @SuppressWarnings("unchecked")
+            List<user_main_model> users = (List<user_main_model>) ois.readObject();
+            for (user_main_model user : users) {
+                if (user.getUserID().equals(userId)) {
+                    return true;
+                }
+            }
+        } catch (IOException | ClassNotFoundException e) {
+            // If file is empty or corrupted, return false
+        }
+        return false;
+    }
+
+    // Save user data to binary file
+    private boolean saveUserData() {
+        List<user_main_model> users = new ArrayList<>();
+
+        // Read existing users
+        File file = new File(USER_DATA_FILE);
+        if (file.exists()) {
+            try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(file))) {
+                @SuppressWarnings("unchecked")
+                List<user_main_model> existingUsers = (List<user_main_model>) ois.readObject();
+                users.addAll(existingUsers);
+            } catch (IOException | ClassNotFoundException e) {
+                // If can't read existing file, start with empty list
+            }
+        }
+
+        // Create appropriate user object based on account type
+        user_main_model newUser;
+        String accountType = acc_type.getValue();
+
+        if (accountType.equals("General commuter")) {
+            newUser = new GeneralCommuterModel(
+                    user_id.getText(),
+                    user_name.getText(),
+                    pass.getText(),
+                    nid.getText(),
+                    lic_num.getText(),
+                    phn.getText()
+            );
+        } else {
+            newUser = new PublicTransportCoordinatorModel(
+                    user_id.getText(),
+                    user_name.getText(),
+                    pass.getText(),
+                    nid.getText(),
+                    lic_num.getText(),
+                    phn.getText()
+            );
+        }
+
+        // Add new user to the list
+        users.add(newUser);
+
+        // Save all users to file
+        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(USER_DATA_FILE))) {
+            oos.writeObject(users);
+            return true;
+        } catch (IOException e) {
+            e.printStackTrace();
+            return false;
         }
     }
 }
