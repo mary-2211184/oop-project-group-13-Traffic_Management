@@ -1,14 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.group13.oopprojectgroup13traffic_management.Rafi.SpecificStopController"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane prefHeight="513.0" prefWidth="702.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.group13.oopprojectgroup13traffic_management.Rafi.SpecificStopController">
+   <children>
+      <TextField fx:id="stp_num" layoutX="163.0" layoutY="44.0" />
+      <TextField fx:id="bus_num" layoutX="163.0" layoutY="80.0" />
+      <TextField fx:id="root_num" layoutX="163.0" layoutY="124.0" />
+      <TextField fx:id="arrival_time" layoutX="163.0" layoutY="214.0" />
+      <TextField fx:id="go_time" layoutX="163.0" layoutY="257.0" />
+      <TextField fx:id="occupit_sit" layoutX="163.0" layoutY="297.0" />
+      <TextField fx:id="empt_sit" layoutX="163.0" layoutY="343.0" />
+      <TextField fx:id="stp_fee" layoutX="163.0" layoutY="388.0" />
+      <Label layoutX="62.0" layoutY="48.0" text="Stop number" />
+      <Label layoutX="54.0" layoutY="84.0" text="Bus number" />
+      <Label layoutX="52.0" layoutY="128.0" text="root number" />
+      <Label layoutX="46.0" layoutY="218.0" text="arrival time" />
+      <Label layoutX="39.0" layoutY="261.0" text="Dispatch time" />
+      <Label layoutX="42.0" layoutY="301.0" text="Occupid Sit" />
+      <Label layoutX="47.0" layoutY="347.0" text="Empty Sit" />
+      <Label layoutX="35.0" layoutY="392.0" text="Pay ammount" />
+      <DatePicker fx:id="date" layoutX="151.0" layoutY="164.0" />
+      <Label layoutX="42.0" layoutY="168.0" text="Date" />
+      <ComboBox fx:id="pay_option" layoutX="163.0" layoutY="429.0" prefWidth="150.0" />
+      <Label layoutX="60.0" layoutY="433.0" text="pay method" />
+      <CheckBox fx:id="terms" layoutX="163.0" layoutY="475.0" mnemonicParsing="false" text="I accept the terms and condition" />
+      <Button layoutX="565.0" layoutY="463.0" mnemonicParsing="false" onAction="#record" text="submit" />
+      <Button layoutX="554.0" layoutY="429.0" mnemonicParsing="false" onAction="#u2_dashboard" text="Dashboard" />
+   </children>
 </AnchorPane>
