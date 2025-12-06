@@ -16,7 +16,7 @@ public class GenCommuterController {
         // Initialization code if needed
     }
 
-    @FXML
+    @Deprecated
     public void driv_lic_app(ActionEvent actionEvent) {
         try {
             Parent root = FXMLLoader.load(getClass().getResource("licenses_aplication.fxml"));
@@ -29,7 +29,7 @@ public class GenCommuterController {
         }
     }
 
-    @FXML
+    @Deprecated
     public void raod_cond(ActionEvent actionEvent) {
         try {
             Parent root = FXMLLoader.load(getClass().getResource("hazardous_roads.fxml"));
@@ -41,7 +41,7 @@ public class GenCommuterController {
         }
     }
 
-    @FXML
+    @Deprecated
     public void fine_pay(ActionEvent actionEvent) {
         try {
             Parent root = FXMLLoader.load(getClass().getResource("pay_fine.fxml"));
@@ -53,7 +53,7 @@ public class GenCommuterController {
         }
     }
 
-    @FXML
+    @Deprecated
     public void payment(ActionEvent actionEvent) {
         try {
             Parent root = FXMLLoader.load(getClass().getResource("pay_passes.fxml"));
@@ -65,7 +65,7 @@ public class GenCommuterController {
         }
     }
 
-    @FXML
+    @Deprecated
     public void fare_list(ActionEvent actionEvent) {
         try {
             Parent root = FXMLLoader.load(getClass().getResource("fare_list.fxml"));
@@ -77,7 +77,7 @@ public class GenCommuterController {
         }
     }
 
-    @FXML
+    @Deprecated
     public void vh_complain(ActionEvent actionEvent) {
         try {
             Parent root = FXMLLoader.load(getClass().getResource("vehicle_complain.fxml"));
@@ -89,7 +89,7 @@ public class GenCommuterController {
         }
     }
 
-    @FXML
+    @Deprecated
     public void ride(ActionEvent actionEvent) {
         try {
             Parent root = FXMLLoader.load(getClass().getResource("share_trip.fxml"));
@@ -101,7 +101,7 @@ public class GenCommuterController {
         }
     }
 
-    @FXML
+    @Deprecated
     public void TandC(ActionEvent actionEvent) {
         try {
             Parent root = FXMLLoader.load(getClass().getResource("policies_regulations.fxml"));
@@ -113,7 +113,7 @@ public class GenCommuterController {
         }
     }
 
-    @FXML
+    @Deprecated
     public void signout(ActionEvent actionEvent) {
         try {
             Parent root = FXMLLoader.load(getClass().getResource("log-in.fxml"));
