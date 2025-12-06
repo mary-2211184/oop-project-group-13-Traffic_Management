@@ -3,6 +3,7 @@ module com.group13.oopprojectgroup13traffic_management {
     requires javafx.controls;
     requires javafx.fxml;
     requires java.logging;
+    requires javafx.graphics;
 
 
     opens com.group13.oopprojectgroup13traffic_management to javafx.fxml;
