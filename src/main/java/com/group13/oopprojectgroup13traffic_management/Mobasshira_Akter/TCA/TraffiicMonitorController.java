@@ -45,35 +45,41 @@ public class TrafficMonitorController
     @javafx.fxml.FXML
     private TableView tmTV;
 
+    public void rbOA(ActionEvent actionEvent) {}
+
     @javafx.fxml.FXML
     public void initialize() {
     }
 
     @javafx.fxml.FXML
 
-    public void Back(ActionEvent actionEvent) {
-        try {
-            // Load the Traffic_Monitor.fxml file
-            FXMLLoader loader = new FXMLLoader(TrafficMonitorController.class.getResource("Traffic_Monitor.fxml"));
-            Parent root = loader.load();
+    public void rbOA(ActionEvent actionEvent){
+            try {
+                // Load the Traffic_Monitor.fxml file
+                FXMLLoader loader = new FXMLLoader(TrafficMonitorController.class.getResource("Traffic_Monitor.fxml"));
+                Parent root = loader.load();
 
-            // Get the current stage from the action event
-            Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+                // Get the current stage from the action event
+                Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
 
-            // Create new scene and set it on the stage
-            Scene scene = new Scene(root);
-            stage.setScene(scene);
-            stage.setTitle("Traffic_Monitor");
-            stage.show();
-        } catch (IOException e) {
-            e.printStackTrace();
-            // Handle the exception appropriately (show error message, etc.)
-        //}
-    }
+                // Create new scene and set it on the stage
+                Scene scene = new Scene(root);
+                stage.setScene(scene);
+                stage.setTitle("Traffic_Monitor");
+                stage.show();
+            } catch (IOException e) {
+                e.printStackTrace();
+                // Handle the exception appropriately (show error message, etc.)
+                //}
+            }
 
-    private URL getResource(String);
-            return null;
-    }
+            private URL getResource (String);
+            {
+                return null;
+            }
+        }
+
+
 
 
     //public void rbOA(ActionEvent actionEvent) {
