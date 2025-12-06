@@ -2,6 +2,7 @@ package com.group13.oopprojectgroup13traffic_management.Rafi;
 
 import javafx.event.ActionEvent;
 import javafx.scene.control.CheckBox;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -31,6 +32,8 @@ public class NewAccountController
     private TextField nid;
     @javafx.fxml.FXML
     private CheckBox check;
+    @FXML
+    private ComboBox acc_type;
 
     @javafx.fxml.FXML
     public void initialize() {

@@ -26,7 +26,7 @@
       </TableView>
       <TextField fx:id="rssTF" layoutX="121.0" layoutY="137.0" promptText="Red Signal Second" />
       <Label layoutX="69.0" layoutY="141.0" text="Red:" />
-      <Label layoutX="63.0" layoutY="182.0" text="Yello:" />
+      <Label layoutX="63.0" layoutY="182.0" text="Yellow:" />
       <Label layoutX="56.0" layoutY="224.0" text="Green:" />
       <TextField fx:id="gssTF" layoutX="119.0" layoutY="221.0" promptText="Green Signal Second" />
       <TextField fx:id="yssTF" layoutX="119.0" layoutY="178.0" promptText="Yellow Signal Second" />

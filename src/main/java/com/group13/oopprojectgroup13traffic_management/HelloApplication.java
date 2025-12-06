@@ -1,3 +1,4 @@
+
 package com.group13.oopprojectgroup13traffic_management;
 
 import javafx.application.Application;
@@ -12,7 +13,7 @@ public class HelloApplication extends Application {
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Rafi/log-in.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
-        stage.setTitle("Traffic Management App");
+        stage.setTitle("Hello!");
         stage.setScene(scene);
         stage.show();
     }
@@ -20,4 +21,5 @@ public class HelloApplication extends Application {
     public static void main(String[] args) {
         launch();
     }
+
 }

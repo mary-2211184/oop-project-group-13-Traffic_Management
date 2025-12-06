@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="408.0" prefWidth="690.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.group13.oopprojectgroup13traffic_management.Limu.policymaker.ReviewReportPandTraController">
+   <children>
+      <Label layoutX="147.0" layoutY="3.0" prefHeight="28.0" prefWidth="288.0" text="Traffic and Parking Reports">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Label layoutY="64.0" prefHeight="26.0" prefWidth="177.0" text="Report Type">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="reporttypeCombobox" layoutX="180.0" layoutY="71.0" prefWidth="150.0" />
+      <Label layoutX="343.0" layoutY="58.0" prefHeight="26.0" prefWidth="177.0" text="Select Area">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="selectAreaCombobox" layoutX="532.0" layoutY="65.0" prefWidth="150.0" />
+      <DatePicker fx:id="datepicker" layoutX="525.0" layoutY="122.0" />
+      <Label layoutX="350.0" layoutY="115.0" prefHeight="26.0" prefWidth="177.0" text="Date">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+      <Label layoutY="115.0" prefHeight="26.0" prefWidth="177.0" text="Report ID">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+      <TextField fx:id="reportIDTextfield" layoutX="181.0" layoutY="123.0" />
+      <Button layoutX="178.0" layoutY="162.0" mnemonicParsing="false" onAction="#addReportButton" prefHeight="32.0" prefWidth="163.0" text="Add report" />
+      <Button layoutX="393.0" layoutY="162.0" mnemonicParsing="false" onAction="#showAllButton" prefHeight="32.0" prefWidth="163.0" text="Show All Report" />
+      <TableView fx:id="tableview" layoutY="214.0" prefHeight="200.0" prefWidth="687.0">
+        <columns>
+          <TableColumn fx:id="reporttypeColumn" prefWidth="162.66665136814117" text="Report Type" />
+          <TableColumn fx:id="selectAreaColumn" prefWidth="147.33335876464844" text="Select Area" />
+            <TableColumn fx:id="reportIDColumn" prefWidth="157.99996948242188" text="Report ID" />
+            <TableColumn fx:id="dateColumn" prefWidth="218.66659545898438" text="Date" />
+        </columns>
+      </TableView>
+      <Button layoutX="2.0" layoutY="10.0" mnemonicParsing="false" onAction="#backButton" prefHeight="32.0" prefWidth="139.0" text="BAck" />
+   </children>
+</AnchorPane>
