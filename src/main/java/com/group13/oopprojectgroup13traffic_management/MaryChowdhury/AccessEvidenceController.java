@@ -74,7 +74,6 @@ public class AccessEvidenceController{
         evidenceStatus.setText(STR."Downloaded \{sel}");
     }
 
-
     @javafx.fxml.FXML
     public void oaViewSelected(ActionEvent actionEvent) {
         String sel = evidenceList.getSelectionModel().getSelectedItem();
