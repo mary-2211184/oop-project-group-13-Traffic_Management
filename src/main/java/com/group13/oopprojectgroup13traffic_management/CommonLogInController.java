@@ -34,7 +34,7 @@ public class CommonLogInController {
             stage.show();
         }
         else if (username.equals("Mary2") && password.equals("Mary")) {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("MaryChowdhury/KitchenStaff/KitchenStaffDashboard.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("MaryChowdhury/TrafficEnforcementOfficerDashboard.fxml"));
             Parent root = fxmlLoader.load();
             Stage stage = (Stage) useridtf.getScene().getWindow();
             stage.setTitle(" k");
