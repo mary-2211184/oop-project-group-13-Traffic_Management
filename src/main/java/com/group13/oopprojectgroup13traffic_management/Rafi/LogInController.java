@@ -11,18 +11,20 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.stage.Stage;
 import javafx.scene.Node;
-import java.io.IOException;
+import java.io.*;
+import java.util.List;
 
 public class LogInController
 {
     @javafx.fxml.FXML
-    private ComboBox catagory;
-
+    private ComboBox<String> catagory;
     @javafx.fxml.FXML
     private TextField UserID;
-
     @javafx.fxml.FXML
     private PasswordField Password;
+
+    // File name for storing user data
+    private static final String USER_DATA_FILE = "user_data.bin";
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -36,110 +38,108 @@ public class LogInController
     public void signIN(ActionEvent actionEvent) {
         // Check if category is selected
         if (catagory.getValue() == null) {
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("Error");
-            alert.setHeaderText(null);
-            alert.setContentText("Please select a category.");
-            alert.showAndWait();
+            showError("Please select a category.");
             return;
         }
 
-        // Check if UserID is entered
+        // Check if User ID is entered
         if (UserID.getText().trim().isEmpty()) {
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("Error");
-            alert.setHeaderText(null);
-            alert.setContentText("Please enter your User ID.");
-            alert.showAndWait();
+            showError("Please enter your User ID.");
             return;
         }
 
-        // Get password text
+        // Check if Password is entered
+        if (Password.getText().trim().isEmpty()) {
+            showError("Please enter your password.");
+            return;
+        }
+
+        // Verify user credentials
+        String userId = UserID.getText();
         String password = Password.getText();
+        String selectedCategory = catagory.getValue();
 
-        // Check password length (at least 6 characters)
-        if (password.length() < 6) {
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("Error");
-            alert.setHeaderText(null);
-            alert.setContentText("Please rewrite the password atleast 6 charecter with an number and a spacial charecter.");
-            alert.showAndWait();
-            return;
-        }
-
-        // Check if password contains a number
-        boolean hasNumber = false;
-        for (int i = 0; i < password.length(); i++) {
-            char c = password.charAt(i);
-            if (Character.isDigit(c)) {
-                hasNumber = true;
-                break;
-            }
-        }
-
-        // Check if password contains a special character
-        boolean hasSpecialChar = false;
-        String specialChars = "!@#$%^&*()_+-=[]{}|;:,.<>?`~";
-        for (int i = 0; i < password.length(); i++) {
-            char c = password.charAt(i);
-            if (specialChars.contains(String.valueOf(c))) {
-                hasSpecialChar = true;
-                break;
-            }
-        }
-
-        // If password doesn't have number or special character, show error
-        if (!hasNumber || !hasSpecialChar) {
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("Error");
-            alert.setHeaderText(null);
-            alert.setContentText("Please rewrite the password atleast 6 charecter with an number and a spacial charecter.");
-            alert.showAndWait();
-            return;
-        }
-
-        // All validations passed, now navigate to correct scene
-        String selectedCategory = (String) catagory.getValue();
-        String fxmlFile = "";
-
-        if (selectedCategory.equals("General commuter")) {
-            fxmlFile = "gen_commuter.fxml";
-        } else if (selectedCategory.equals("Public transport coordinator")) {
-            fxmlFile = "checker.fxml";
-        }
-
-        try {
-            // Load the FXML file
-            Parent root = FXMLLoader.load(getClass().getResource(fxmlFile));
-
-            // Get the current window (stage)
-            Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-
-            // Set the new scene
-            stage.setScene(new Scene(root));
-            stage.show();
-
-        } catch (IOException e) {
-            e.printStackTrace();
-            // Show error if file not found
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("Error");
-            alert.setHeaderText(null);
-            alert.setContentText("Cannot load the next page. Please check if the file exists.");
-            alert.showAndWait();
+        if (verifyUser(userId, password, selectedCategory)) {
+            // Login successful - navigate to correct scene
+            navigateToDashboard(actionEvent, selectedCategory);
+        } else {
+            showError("Invalid User ID, Password, or Account Type.");
         }
     }
 
-    @FXML
+    // Add this method to handle the "Create New Account" button
+    @javafx.fxml.FXML
     public void new_acc(ActionEvent actionEvent) {
         try {
             Parent root = FXMLLoader.load(getClass().getResource("new_account.fxml"));
             Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-            stage.setTitle("Create a New Account");
             stage.setScene(new Scene(root));
             stage.show();
         } catch (IOException e) {
             e.printStackTrace();
+            showError("Cannot load new account page.");
         }
+    }
+
+    // Verify user from binary file
+    private boolean verifyUser(String userId, String password, String category) {
+        File file = new File(USER_DATA_FILE);
+        if (!file.exists()) {
+            return false;
+        }
+
+        try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(file))) {
+            @SuppressWarnings("unchecked")
+            List<user_main_model> users = (List<user_main_model>) ois.readObject();
+
+            for (user_main_model user : users) {
+                if (user.getUserID().equals(userId) &&
+                        user.getUser_password().equals(password)) {
+
+                    // Check if user type matches selected category
+                    if (user instanceof GeneralCommuterModel && category.equals("General commuter")) {
+                        return true;
+                    } else if (user instanceof PublicTransportCoordinatorModel &&
+                            category.equals("Public transport coordinator")) {
+                        return true;
+                    }
+                }
+            }
+        } catch (IOException | ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+
+        return false;
+    }
+
+    // Navigate to dashboard based on user type
+    private void navigateToDashboard(ActionEvent actionEvent, String category) {
+        try {
+            String fxmlFile = "";
+
+            if (category.equals("General commuter")) {
+                fxmlFile = "gen_commuter.fxml";
+            } else if (category.equals("Public transport coordinator")) {
+                fxmlFile = "user2_dashboard.fxml"; // CHANGED FROM "checker.fxml" TO "user2_dashboard.fxml"
+            }
+
+            Parent root = FXMLLoader.load(getClass().getResource(fxmlFile));
+            Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+            stage.setScene(new Scene(root));
+            stage.show();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            showError("Cannot load dashboard.");
+        }
+    }
+
+    // Show error messages
+    private void showError(String message) {
+        Alert errorBox = new Alert(Alert.AlertType.ERROR);
+        errorBox.setTitle("Error");
+        errorBox.setHeaderText(null);
+        errorBox.setContentText(message);
+        errorBox.showAndWait();
     }
 }

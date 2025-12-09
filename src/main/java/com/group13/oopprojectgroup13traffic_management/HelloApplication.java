@@ -11,6 +11,23 @@ import java.io.IOException;
 public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Rafi/log-in.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        stage.setTitle("Hello!");
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    public static void main(String[] args) {
+        launch();
+    }
+
+}
+
+
+public class HelloApplication extends Application {
+    @Override
+    public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("CommonLogIn.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         stage.setTitle("Hello!");
@@ -23,3 +40,8 @@ public class HelloApplication extends Application {
     }
 
 }
+
+
+
+
+

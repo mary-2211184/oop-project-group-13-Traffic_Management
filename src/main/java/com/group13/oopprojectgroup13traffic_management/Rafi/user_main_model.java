@@ -1,6 +1,9 @@
 package com.group13.oopprojectgroup13traffic_management.Rafi;
 
-public class user_main_model {
+import java.io.Serializable;
+
+public class user_main_model implements Serializable {
+    private static final long serialVersionUID = 1L;
     private String userID;
     private String user_name;
     private String user_password;
@@ -8,7 +11,8 @@ public class user_main_model {
     private String drive_licenses;
     private String user_phn;
 
-    public user_main_model(String userID, String user_name, String user_password, String user_NID, String drive_licenses, String user_phn) {
+    public user_main_model(String userID, String user_name, String user_password,
+                           String user_NID, String drive_licenses, String user_phn) {
         this.userID = userID;
         this.user_name = user_name;
         this.user_password = user_password;
