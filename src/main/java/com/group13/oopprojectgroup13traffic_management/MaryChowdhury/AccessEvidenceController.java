@@ -70,7 +70,6 @@ public class AccessEvidenceController{
     public void oaDownload(ActionEvent actionEvent) {
         String sel = evidenceList.getSelectionModel().getSelectedItem();
         if (sel==null) { evidenceStatus.setText("Select file."); return; }
-        // TODO: download
         evidenceStatus.setText(STR."Downloaded \{sel}");
     }
 
@@ -78,7 +77,6 @@ public class AccessEvidenceController{
     public void oaViewSelected(ActionEvent actionEvent) {
         String sel = evidenceList.getSelectionModel().getSelectedItem();
         if (sel==null) { evidenceStatus.setText("Select file."); return; }
-        // TODO: open embedded viewer (ImageView / MediaView)
         evidenceStatus.setText(STR."Opening viewer for \{sel}");
     }
 
@@ -86,7 +84,6 @@ public class AccessEvidenceController{
     public void oaLoadEvidence(ActionEvent actionEvent) {
         String id = reportSelector.getValue();
         if (id==null) { evidenceStatus.setText("Select report."); return; }
-        // TODO: fetch evidence file list from server
         items.clear();
         items.addAll("photo1.jpg","video1.mp4"); // placeholder
         evidenceStatus.setText(STR."Loaded evidence for \{id}");

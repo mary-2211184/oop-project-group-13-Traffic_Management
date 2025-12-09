@@ -128,22 +128,3 @@ public class VerifyReportController
 
         MyReportsController.ReportRow value;
     }
-//
-//    private ObservableValue<String> call(TableColumn.CellDataFeatures<MyReportsController.ReportRow, String> c1) {
-//        ObservableValue<String> call = call(c1);
-//        return call;
-//    }
-//
-//
-//    @FXML
-//    public void oaViewEvidence(ActionEvent actionEvent) {
-//        ChoiceBox<Object> reportsTable = null;
-//        MyReportsController.ReportRow sel = (MyReportsController.ReportRow) reportsTable.getSelectionModel().getSelectedItem();
-//        BreakIterator verifyLabel = null;
-//        if (sel==null) { verifyLabel.setText("Select a report."); return; }
-//        // TODO: open evidence viewer and load files
-//        verifyLabel.setText(STR."Open evidence for \{sel.id}");
-//    }
-//
-//void main() {
-//}

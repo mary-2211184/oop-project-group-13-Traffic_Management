@@ -9,8 +9,7 @@ import javafx.scene.control.*;
 
 import java.text.BreakIterator;
 
-public class DeleteReportController
-{
+public class DeleteReportController {
     @FXML
     private TableColumn colTime;
     @FXML
@@ -74,18 +73,6 @@ public class DeleteReportController
         this.colStatus = colStatus;
     }
 
-//    public ObservableList<ReportRow> getData() {
-//        return data;
-//    }
-
-//    public void setData(ObservableList<ReportRow> data) {
-//        this.data = data;
-//    }
-
-//    @Override
-//    public String toString() {
-//        return STR."deletereportcontroller{colTime=\{colTime}, deleteStatusLabel=\{deleteStatusLabel}, tableView=\{tableView}, colDate=\{colDate}, colId=\{colId}, colStatus=\{colStatus}, data=\{data}}";
-//    }
 
     public DeleteReportController(TableColumn colTime, Label deleteStatusLabel, TableView tableView, TableColumn colDate, TableColumn colId, TableColumn colStatus, ObservableList<ReportRow> data) {
         this.colTime = colTime;
@@ -105,47 +92,5 @@ public class DeleteReportController
         colDate.setCellValueFactory(c -> new SimpleStringProperty(c.getClass().toGenericString()));
         colStatus.setCellValueFactory(c -> new SimpleStringProperty(c.getClass().toGenericString()));
         colStatus.setCellValueFactory(c -> new SimpleStringProperty(c.getClass().toGenericString()));
-//        tableView.setItems(data);
-
-//        data.addAll(
-//                new com.group13.oopprojectgroup13traffic_management.ReportRowBuilder().setId("INC-AAA1").setDate("2025-11-12").setType("Accident").setStatus("New").createReportRow(),
-//                new com.group13.oopprojectgroup13traffic_management.ReportRowBuilder().setId("INC-BBB2").setDate("2025-11-13").setType("Obstruction").setStatus("Resolved").createReportRow()
-//        );
     }
-
 }
-//
-//    @FXML
-//    public void oaDeleteSelected(Event event) {
-//        ChoiceBox<Object> reportsTable = null;
-//        ReportRow sel = (ReportRow) reportsTable.getSelectionModel().getSelectedItem();
-//        BreakIterator deleteStatusLabel = null;
-//        if (sel == null) {
-//            deleteStatusLabel.setText("Select a report first.");
-//            return;
-//        }
-//        Alert confirm = new Alert(Alert.AlertType.CONFIRMATION, STR."Delete report \{sel.id}?", ButtonType.YES, ButtonType.NO);
-//        confirm.setHeaderText("Confirm Deletion");
-//        confirm.showAndWait().ifPresent(btn -> {
-//            if (btn == ButtonType.YES) {
-//                // TODO: delete from DB
-//                data.remove(sel);
-//                deleteStatusLabel.setText(STR."Report deleted: \{sel.id}");
-//            } else {
-//                deleteStatusLabel.setText("Deletion cancelled.");
-//            }
-//        });
-//    }
-//
-//public static class ReportRow extends ClipboardAssistance {
-//    public String id, date, type, status;
-//    public ReportRow(String id, String date, String type, String status){
-//        this.id=id;this.date=date;this.type=type;this.status=status;}
-//}
-//
-//
-//
-//void main() {
-//}
-//
-//private Clipboard data;

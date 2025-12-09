@@ -1,7 +1,5 @@
 package com.group13.oopprojectgroup13traffic_management.MaryChowdhury;
 
-//import com.sun.javafx.charts.Legend;
-//import com.sun.javafx.collections.ElementObservableListDecorator;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.TableCell;
@@ -101,41 +99,4 @@ public class TrackStatusController {
                     }
                 }
             }
-        });
-
-//        Legend statusTable = null;
-//        ObservableList<Legend.LegendItem> data = null;
-//        statusTable.setItems(null);
-//        loadData();
-    }
-
-
-    }
-//
-//public class TrackStatusControllerImpl extends trackStatusController {
-//    public TrackStatusControllerImpl(TableView statusTableView, TableColumn colType, TableColumn colTimeStamp, TableColumn colId, TableColumn colStatus) {
-//        super(statusTableView, colType, colTimeStamp, colId, colStatus);
-//    }
-//}
-//
-//private void loadData() {
-////        ElementObservableListDecorator<Object> data = null;
-////        data.clear();
-////        data.addAll(
-////                new StatusRow("INC-AAA1","Accident","2025-11-12 08:30", "New"),
-////                new StatusRow("INC-BBB2","Obstruction","2025-11-13 14:10", "In Progress")
-////        );
-//    }
-//
-//    public static class StatusRow {
-//        public String id,type,timestamp,status;
-//        public StatusRow(String id,String type,String timestamp,String status){this.id=id;this.type=type;this.timestamp=timestamp;this.status=status;}
-//        public String getId(){return id;}
-//        public String getType(){return type;}
-//        public String getTimestamp(){return timestamp;}
-//        public String getStatus(){return status;}
-//    }
-//
-//
-//void main() {
-//}
+        });}}

@@ -12,8 +12,7 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.UUID;
 
-public class IncidentReportFormController
-{
+public class IncidentReportFormController {
     @FXML
     private TextField locationField;
     @FXML
@@ -113,6 +112,7 @@ public class IncidentReportFormController
     public void onUploadEvidence(ActionEvent actionEvent) {
         statusLabel.setText("Open 'Upload Evidence' screen from your application navigation.");
     }
+
     private void clearForm() {
         locationField.clear();
         typeCombo.setValue(null);
@@ -137,11 +137,6 @@ public class IncidentReportFormController
             statusLabel.setText("Time must be HH:mm");
             return;
         }
-//        ObservableListWrapper<Object> allowedTypes = null;
-//        if (!allowedTypes.contains(type)) {
-//            statusLabel.setText("Invalid incident type.");
-//            return;
-//
-//
-//        }
-    }}
+
+    }
+}

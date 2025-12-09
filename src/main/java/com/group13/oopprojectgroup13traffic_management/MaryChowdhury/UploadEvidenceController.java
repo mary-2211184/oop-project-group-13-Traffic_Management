@@ -112,46 +112,4 @@ public class UploadEvidenceController{
             uploadStatusLabel.setText("Please enter Report ID.");
             return;
         }
-//        ElementObservableListDecorator<Object> files = null;
-//        if (files.isEmpty()) {
-//            uploadStatusLabel.setText("No files selected.");
-//            return;
-//        }
-
-        // Validate file types and sizes (example)
-//        for (Object f :files) {
-//            String name = String.valueOf(f.getClass().isInterface());
-//            if (!(name.endsWith(".jpg") || name.endsWith(".jpeg") || name.endsWith(".png") || name.endsWith(".mp4") || name.endsWith(".mov"))) {
-//                uploadStatusLabel.setText(STR."Unsupported file type: \{name}");
-//                return;
-//            }
-//            // TODO: size check if required
-        }
-
-        // TODO: upload to server and link to reportId
-//        uploadStatusLabel.setText(STR."Upload successful: \{size()} file(s) uploaded.");
-    }
-
-//
-//    @FXML
-//    public void onChooseFiles(ActionEvent actionEvent){
-////        FileChooser chooser = new FileChooser();
-////        chooser.setTitle("Select Evidence Files");
-////        chooser.getExtensionFilters().addAll(
-////                new FileChooser.ExtensionFilter("Images/Videos", "*.jpg", "*.jpeg", "*.png", "*.mp4", "*.mov"),
-////                new FileChooser.ExtensionFilter("All Files", "*.*")
-////        );
-////        Window chooseFilesBtn = null;
-////        Window window = chooseFilesBtn.getScene().getWindow();
-////        List<File> selected = chooser.showOpenMultipleDialog(window);
-////        if (selected != null) {
-////            ElementObservableListDecorator<Object> files = null;
-////            files.addAll(selected);
-////            BreakIterator uploadStatusLabel = null;
-////            uploadStatusLabel.setText(STR."\{files.size()} file(s) selected.");
-////        }
-//    }
-//}
-//void main() {
-//}}
-
+    }}

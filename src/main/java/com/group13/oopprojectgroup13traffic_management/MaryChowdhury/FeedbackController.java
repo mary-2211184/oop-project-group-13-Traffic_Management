@@ -84,7 +84,6 @@ public class FeedbackController
             return;
         }
 
-        // TODO: persist feedback with optional reportId
         resultLabel.setText("Thanks — feedback submitted.");
         feedbackArea.clear();
     }

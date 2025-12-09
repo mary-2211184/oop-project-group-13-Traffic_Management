@@ -71,8 +71,7 @@ public class AssignReportController{
             assignStatus.setText("Select report and officer.");
             return;
         }
-        // TODO: verify officer active and jurisdiction
-        // TODO: persist assignment and notify
+
         assignStatus.setText(STR."Assigned \{report} to \{officer}");
     }
     }

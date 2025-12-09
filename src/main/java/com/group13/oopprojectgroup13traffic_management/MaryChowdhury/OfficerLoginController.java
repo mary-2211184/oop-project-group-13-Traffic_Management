@@ -62,11 +62,10 @@ public class OfficerLoginController
             return;
         }
 
-        // TODO: authenticate with backend and verify officer role
-        boolean ok = "officer".equals(user) && "password".equals(pass); // placeholder
+        boolean ok = "officer".equals(user) && "password".equals(pass);
         if (ok) {
             loginStatus.setText("Login successful. Loading dashboard...");
-            // TODO: open officer dashboard scene
+
         } else {
             loginStatus.setText("Invalid credentials or insufficient role.");
         }

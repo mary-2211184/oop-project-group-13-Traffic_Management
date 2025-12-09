@@ -70,7 +70,6 @@ public class CloseReportController{
     private void loadStatus() {
         String id = reportSelector.getValue();
         if (id==null) { statusLabel.setText(""); return; }
-        // TODO: fetch status
         statusLabel.setText("Current: Resolved");
     }
 
@@ -78,10 +77,8 @@ public class CloseReportController{
     public void oaMarkClosed(ActionEvent actionEvent) {
         String id = reportSelector.getValue();
         if (id==null) { resultLabel.setText("Select report."); return; }
-        // TODO: verify resolved and perform final checks
         String notes = closingNotes.getText();
         String timestamp = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
-        // TODO: persist closed state, store notes and timestamp
         resultLabel.setText(STR."Report \{id} closed at \{timestamp}");
         closingNotes.clear();
 
