@@ -15,7 +15,6 @@ import java.io.IOException;
 
 public class SignalOptimizationController
 {
-
     @javafx.fxml.FXML
     private TableColumn svttTc;
     @javafx.fxml.FXML
@@ -41,6 +40,9 @@ public class SignalOptimizationController
 
     @javafx.fxml.FXML
     public void initialize() {
+        // This method runs automatically when the FXML loads
+        // You can put initialization code here
+        System.out.println("Signal Optimization Controller Initialized!");
     }
 
     @Deprecated
@@ -62,29 +64,28 @@ public class SignalOptimizationController
     @javafx.fxml.FXML
     public void antOA(ActionEvent actionEvent) {
     }
-}
 
+    @javafx.fxml.FXML
+    public void Back(ActionEvent actionEvent) {
+        try {
+            // IMPORTANT: Change "SignalOptimization.fxml" to the actual FXML file
+            // you want to go back to (e.g., "TrafficMonitor.fxml")
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("TrafficMonitor.fxml"));
+            Parent root = loader.load();
 
-@javafx.fxml.FXML
-public void initialize() {
-}
+            // Get the current stage from the action event
+            Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
 
-public void Back(ActionEvent actionEvent) {
-    try {
-        // Load the Traffic_Monitor.fxml file
-        FXMLLoader loader = new FXMLLoader(TrafficMonitorController.class.getResource("SignalOptimization.fxml"));
-        Parent root = loader.load();
-
-        // Get the current stage from the action event
-        Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-
-        // Create new scene and set it on the stage
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
-        stage.setTitle("Signal Optimization");
-        stage.show();
-    } catch (IOException e) {
-        e.printStackTrace();
-        // Handle the exception appropriately (show error message, etc.)
-        //}
+            // Create new scene and set it on the stage
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+            stage.setTitle("Traffic Monitor"); // Change title accordingly
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+            // Handle the exception appropriately (show error message, etc.)
+            System.out.println("Error loading FXML file: " + e.getMessage());
+        }
     }
+}
+// END OF CLASS - Do not write any methods after this closing brace
